@@ -34,7 +34,7 @@ export const createGood = async (req, res) => {
       name,
       price,
       description,
-      image: `http://localhost:4000/static/${req.file.filename}`,
+      image: `http://localhost:4000/assets/${req.file.filename}`,
     });
 
     res.status(201).json(good);

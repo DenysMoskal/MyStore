@@ -10,7 +10,7 @@ const Header = () => {
       <img src={shop} alt="shop" className={styles.image} />
       <ul className={styles.list__container}>
         <li>
-          <NavLink to="/">Theme</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
           <NavLink to="/shop">Shop</NavLink>

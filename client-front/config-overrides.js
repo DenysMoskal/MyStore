@@ -5,6 +5,7 @@ module.exports = function override(config, env) {
     '@containers': 'src/containers',
     '@components': 'src/components',
     '@routes': 'src/routes',
+    '@store': 'src/store',
   })(config);
   return config;
 };
