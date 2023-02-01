@@ -25,7 +25,7 @@ app.use('/assets', express.static('assets'));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  res.send('Hello word');
+  res.send('work');
 });
 
 app.get('/goods', getAllGoods);
