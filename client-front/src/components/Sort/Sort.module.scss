@@ -1,0 +1,16 @@
+.container {
+  list-style-type: none;
+
+  color: white;
+  max-width: 200px;
+  padding: 0;
+  margin-left: 110px;
+  margin-top: -14px;
+
+  li {
+    background-color: black;
+    cursor: pointer;
+    margin: 5px;
+    border: 1px solid white;
+  }
+}

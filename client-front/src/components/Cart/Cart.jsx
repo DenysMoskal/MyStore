@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 
 import styles from './Cart.module.scss';
 
-const Cart = ({ items }) => {
-  console.log(items);
-
+const Cart = ({ sortedGoods }) => {
   return (
     <ul className={styles.container}>
-      {items &&
-        items.map(({ _id, name, price, image, description }) => (
-          <Link to="???">
+      {sortedGoods &&
+        sortedGoods.map(({ _id, name, price, image, description }) => (
+          <Link to={`/:${_id}`}>
             <li key={_id} className={styles.item}>
               <img src={image} alt={name} className={styles.item__image} />
               <h2 className={styles.item__name}>

@@ -1,0 +1,35 @@
+.container {
+  padding: 0 30px 30px 30px;
+}
+
+.items {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  .item__name {
+    color: rgb(128, 55, 0);
+    font-size: 32px;
+  }
+  li {
+    text-align: center;
+    button {
+      display: block;
+      text-decoration: none;
+      font-size: 24px;
+      border: 2px solid black;
+      list-style: none;
+      border-radius: 10%;
+      padding: 20px;
+      color: white;
+      background-color: black;
+      cursor: pointer;
+      margin-right: 60px;
+      width: 240px;
+      height: 64px;
+    }
+    .sort {
+      font-size: 14px;
+    }
+  }
+}
