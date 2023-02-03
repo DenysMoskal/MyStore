@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './ToolBar.module.scss';
 
 import Sort from '@components/Sort';
+import Search from '@components/ShopSearch/';
 
-const ToolBar = ({ items, setIsDescSort, isDescSort }) => {
+const ToolBar = ({ items }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [visibleText, setVisibleText] = React.useState('від найдорожчого');
 
@@ -26,12 +27,9 @@ const ToolBar = ({ items, setIsDescSort, isDescSort }) => {
           <button>Add good</button>
         </li>
       </ul>
+      <Search />
       {isVisible ? (
-        <Sort
-          setVisibleText={setVisibleText}
-          setIsVisible={setIsVisible}
-          setIsDescSort={setIsDescSort}
-        />
+        <Sort setVisibleText={setVisibleText} setIsVisible={setIsVisible} />
       ) : (
         ''
       )}

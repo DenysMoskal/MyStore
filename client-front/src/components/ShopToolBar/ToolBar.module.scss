@@ -1,5 +1,6 @@
 .container {
   padding: 0 30px 30px 30px;
+  position: relative;
 }
 
 .items {
@@ -7,6 +8,7 @@
   list-style-type: none;
   justify-content: space-around;
   align-items: center;
+  padding: 0;
   .item__name {
     color: rgb(128, 55, 0);
     font-size: 32px;
@@ -25,6 +27,7 @@
       background-color: black;
       cursor: pointer;
       margin-right: 60px;
+      margin-left: 60px;
       width: 240px;
       height: 64px;
     }

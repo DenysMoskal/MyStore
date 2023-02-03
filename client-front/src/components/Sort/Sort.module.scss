@@ -1,16 +1,25 @@
 .container {
   list-style-type: none;
+  position: absolute;
 
   color: white;
-  max-width: 200px;
+  width: 240px;
   padding: 0;
-  margin-left: 110px;
-  margin-top: -14px;
+  top: 50px;
+  left: 132px;
 
   li {
+    font-size: 14px;
     background-color: black;
     cursor: pointer;
     margin: 5px;
     border: 1px solid white;
+    padding: 2px;
+    text-align: center;
+  }
+
+  li:hover {
+    border: 1px solid aqua;
+    color: aqua;
   }
 }

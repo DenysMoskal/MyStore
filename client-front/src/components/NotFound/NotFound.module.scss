@@ -1,0 +1,32 @@
+.text {
+  text-align: center;
+  color: rgb(128, 55, 0);
+}
+
+.image {
+  display: block;
+  object-fit: cover;
+  max-width: 400px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+.btn {
+  display: block;
+  margin: auto;
+  font-size: 24px;
+  border: 2px solid black;
+  border-radius: 10%;
+  padding: 20px;
+  color: white;
+  background-color: rgb(128, 55, 0);
+  cursor: pointer;
+
+  margin-top: 20px;
+}
+
+.btn:hover {
+  color: aqua;
+}
