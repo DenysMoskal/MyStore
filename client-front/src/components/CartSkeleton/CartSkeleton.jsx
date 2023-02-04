@@ -11,8 +11,7 @@ const CartSkeleton = (props) => (
     foregroundColor="#ecebeb"
     {...props}
   >
-    <rect x="14" y="328" rx="0" ry="0" width="200" height="18" />
-    <rect x="19" y="282" rx="0" ry="0" width="200" height="55" />
+    <rect x="19" y="315" rx="" ry="0" width="200" height="55" />
     <rect x="19" y="4" rx="15" ry="15" width="200" height="300" />
   </ContentLoader>
 );

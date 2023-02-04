@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import styles from './Shop.module.scss';
 
 import Cart from '@components/Cart';
 
@@ -32,21 +33,36 @@ const Shop = () => {
         setText,
       }}
     >
-      <ShopToolBar items={items} setIsDescSort={setIsDescSort} />
+      <ShopToolBar setIsDescSort={setIsDescSort} />
       {isError ? (
         <NotFound />
       ) : (
-        <div>
-          {isLoading ? (
-            [...new Array(4)].map((_, index) => <CartSkeleton key={index} />)
-          ) : (
-            <Cart
-              items={items}
-              isError={isError}
-              isLoading={isLoading}
-              sortedGoods={sortedGoods}
-            />
-          )}
+        <div className={styles.container}>
+          {isLoading
+            ? [...new Array(4)].map((_, index) => <CartSkeleton key={index} />)
+            : sortedGoods
+                .filter(({ name }) => {
+                  if (!text) {
+                    return true;
+                  }
+                  return name
+                    .toString()
+                    .toLowerCase()
+                    .includes(text.toLowerCase());
+                })
+                .map(({ _id, name, price, image, description }) => (
+                  <Cart
+                    key={_id}
+                    isError={isError}
+                    isLoading={isLoading}
+                    sortedGoods={sortedGoods}
+                    name={name}
+                    price={price}
+                    image={image}
+                    description={description}
+                    _id={_id}
+                  />
+                ))}
         </div>
       )}
     </GoodsContext.Provider>

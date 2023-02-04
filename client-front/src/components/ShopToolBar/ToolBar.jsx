@@ -4,15 +4,13 @@ import styles from './ToolBar.module.scss';
 import Sort from '@components/Sort';
 import Search from '@components/ShopSearch/';
 
-const ToolBar = ({ items }) => {
+const ToolBar = () => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [visibleText, setVisibleText] = React.useState('від найдорожчого');
 
   const onClick = () => {
     setIsVisible(!isVisible);
   };
-
-  console.log(items);
 
   return (
     <div className={styles.container}>

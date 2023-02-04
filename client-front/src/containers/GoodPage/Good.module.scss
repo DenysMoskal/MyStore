@@ -1,0 +1,83 @@
+.container {
+  margin: auto;
+}
+
+.name {
+  text-align: center;
+  margin: 0;
+  font-size: 40px;
+}
+
+.back {
+  display: block;
+
+  font-size: 24px;
+  border: 2px solid rgb(128, 55, 0);
+  border-radius: 10%;
+  padding: 20px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  width: 340px;
+  margin-top: 20px;
+}
+
+.back:hover {
+  color: aqua;
+}
+
+.item {
+  display: flex;
+
+  &__image {
+    display: block;
+    object-fit: cover;
+    width: 340px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__description {
+    margin-left: 20px;
+    border: 2px solid rgb(128, 55, 0);
+    padding: 5px;
+    span {
+      color: rgb(128, 55, 0);
+      font-size: 22px;
+    }
+  }
+  &__price {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 40px;
+    color: rgb(128, 55, 0);
+    font-size: 50px;
+    text-align: center;
+
+    background-color: rgb(240, 203, 203);
+
+    border: 2px solid rgb(128, 55, 0);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 60px;
+  }
+}
+
+.btn {
+  display: block;
+
+  font-size: 24px;
+  border: 2px solid rgb(128, 55, 0);
+  border-radius: 10%;
+  padding: 20px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  margin-left: 60px;
+}
+
+.btn:hover {
+  color: aqua;
+}
