@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getGood } from '@store/goods/goodSlice';
+
+import NotFound from '@components/NotFound';
 
 import styles from './Good.module.scss';
 
@@ -11,13 +13,17 @@ const Good = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  const { item } = useSelector((state) => state.good.good);
+  const { item, isError, isLoading } = useSelector((state) => state.good.good);
 
   React.useEffect(() => {
     dispatch(getGood(id));
-  }, [id]);
+  }, [id, dispatch]);
 
-  return (
+  return isError ? (
+    <NotFound />
+  ) : isLoading ? (
+    <div>Loading...</div>
+  ) : (
     item && (
       <div>
         <div className={styles.item}>

@@ -1,6 +1,7 @@
 import HomePage from '@containers/HomePage';
 import ShopPage from '@containers/ShopPage';
 import GoodPage from '@containers/GoodPage';
+import CreateGood from '@containers/CreateGoodPage';
 
 const routesConfig = [
   {
@@ -14,6 +15,10 @@ const routesConfig = [
   {
     path: `/shop/:id`,
     element: <GoodPage />,
+  },
+  {
+    path: '/create',
+    element: <CreateGood />,
   },
 ];
 

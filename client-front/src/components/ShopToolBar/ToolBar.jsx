@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ToolBar.module.scss';
+import { Link } from 'react-router-dom';
 
 import Sort from '@components/Sort';
 import Search from '@components/ShopSearch/';
@@ -22,7 +23,9 @@ const ToolBar = () => {
         </li>
         <li className={styles.item__name}>Shop</li>
         <li>
-          <button>Add good</button>
+          <Link to="/create">
+            <button>Add good</button>
+          </Link>
         </li>
       </ul>
       <Search />

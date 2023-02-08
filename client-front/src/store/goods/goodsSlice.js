@@ -17,22 +17,22 @@ const goodsSlice = createSlice({
     },
   },
   reducers: {},
-  extraReducers: {
-    [getGoods.pending]: (state) => {
+  extraReducers: (builder) => {
+    builder.addCase(getGoods.pending, (state) => {
       state.goods.isError = false;
       state.goods.isLoading = true;
       state.goods.items = null;
-    },
-    [getGoods.fulfilled]: (state, action) => {
+    });
+    builder.addCase(getGoods.fulfilled, (state, action) => {
       state.goods.isError = false;
       state.goods.isLoading = false;
       state.goods.items = action.payload;
-    },
-    [getGoods.rejected]: (state) => {
+    });
+    builder.addCase(getGoods.rejected, (state) => {
       state.goods.isError = true;
       state.goods.isLoading = false;
       state.goods.items = null;
-    },
+    });
   },
 });
 

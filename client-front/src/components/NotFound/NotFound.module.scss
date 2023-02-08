@@ -1,6 +1,6 @@
 .text {
   text-align: center;
-  color: rgb(128, 55, 0);
+  color: var(--color-brown);
 }
 
 .image {
@@ -17,16 +17,16 @@ a {
   display: block;
   margin: auto;
   font-size: 24px;
-  border: 2px solid black;
+  border: 2px solid var(--color-black);
   border-radius: 10%;
   padding: 20px;
-  color: white;
-  background-color: rgb(128, 55, 0);
+  color: var(--color-white);
+  background-color: var(--color-brown);
   cursor: pointer;
 
   margin-top: 20px;
 }
 
 .btn:hover {
-  color: aqua;
+  color: var(--color-blue);
 }

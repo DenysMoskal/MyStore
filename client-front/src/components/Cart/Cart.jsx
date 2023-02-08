@@ -2,11 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Cart.module.scss';
-import { GoodsContext } from '@hooks/GoodsCotext';
 
 const Cart = ({ sortedGoods, _id, name, price, image, description }) => {
-  console.log(sortedGoods);
-
   return (
     sortedGoods && (
       <ul className={styles.container}>

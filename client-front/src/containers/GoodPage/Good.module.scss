@@ -12,18 +12,18 @@
   display: block;
 
   font-size: 24px;
-  border: 2px solid rgb(128, 55, 0);
+  border: 2px solid var(--color-brown);
   border-radius: 10%;
   padding: 20px;
-  color: white;
-  background-color: black;
+  color: var(--color-white);
+  background-color: var(--color-dark);
   cursor: pointer;
   width: 340px;
   margin-top: 20px;
 }
 
 .back:hover {
-  color: aqua;
+  color: var(--color-blue);
 }
 
 .item {
@@ -41,10 +41,10 @@
   }
   &__description {
     margin-left: 20px;
-    border: 2px solid rgb(128, 55, 0);
+    border: 2px solid var(--color-brown);
     padding: 5px;
     span {
-      color: rgb(128, 55, 0);
+      color: var(--color-brown);
       font-size: 22px;
     }
   }
@@ -52,13 +52,13 @@
     margin: 0;
     margin-left: 20px;
     font-size: 40px;
-    color: rgb(128, 55, 0);
+    color: var(--color-brown);
     font-size: 50px;
     text-align: center;
 
     background-color: rgb(240, 203, 203);
 
-    border: 2px solid rgb(128, 55, 0);
+    border: 2px solid var(--color-brown);
     border-radius: 5px;
     padding: 5px;
     margin-right: 60px;
@@ -69,15 +69,15 @@
   display: block;
 
   font-size: 24px;
-  border: 2px solid rgb(128, 55, 0);
+  border: 2px solid var(--color-brown);
   border-radius: 10%;
   padding: 20px;
-  color: white;
-  background-color: black;
+  color: var(--color-white);
+  background-color: var(--color-dark);
   cursor: pointer;
   margin-left: 60px;
 }
 
 .btn:hover {
-  color: aqua;
+  color: var(--color-blue);
 }

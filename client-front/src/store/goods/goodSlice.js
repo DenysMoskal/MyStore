@@ -7,6 +7,12 @@ export const getGood = createAsyncThunk('good/fetchGood', async (id) => {
   return data;
 });
 
+export const createGood = createAsyncThunk('CREATE_GOOD', async (planeData) => {
+  const { data } = await axios.post('http://localhost:4000/goods/', planeData);
+
+  return data;
+});
+
 const goodSlice = createSlice({
   name: 'good',
   initialState: {
@@ -14,25 +20,42 @@ const goodSlice = createSlice({
       item: null,
       isError: false,
       isLoading: false,
+      errors: null,
     },
   },
   reducers: {},
-  extraReducers: {
-    [getGood.pending]: (state) => {
+  extraReducers: (builder) => {
+    builder.addCase(getGood.pending, (state) => {
       state.good.isError = false;
       state.good.isLoading = true;
       state.good.item = null;
-    },
-    [getGood.fulfilled]: (state, action) => {
+    });
+    builder.addCase(getGood.fulfilled, (state, action) => {
       state.good.isError = false;
       state.good.isLoading = false;
       state.good.item = action.payload[0];
-    },
-    [getGood.rejected]: (state) => {
+    });
+    builder.addCase(getGood.rejected, (state) => {
       state.good.isError = true;
       state.good.isLoading = false;
       state.good.item = null;
-    },
+    });
+    builder.addCase(createGood.pending, (state) => {
+      state.good.isError = false;
+      state.good.isLoading = true;
+      state.good.item = null;
+      state.good.errors = null;
+    });
+    builder.addCase(createGood.fulfilled, (state) => {
+      state.good.isError = false;
+      state.good.isLoading = false;
+      state.good.errors = null;
+    });
+    builder.addCase(createGood.rejected, (state, action) => {
+      state.good.isError = true;
+      state.good.isLoading = false;
+      state.good.errors = action.payload;
+    });
   },
 });
 

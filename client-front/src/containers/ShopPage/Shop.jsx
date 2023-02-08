@@ -39,7 +39,7 @@ const Shop = () => {
       ) : (
         <div className={styles.container}>
           {isLoading
-            ? [...new Array(4)].map((_, index) => <CartSkeleton key={index} />)
+            ? [...new Array(3)].map((_, index) => <CartSkeleton key={index} />)
             : sortedGoods
                 .filter(({ name }) => {
                   if (!text) {

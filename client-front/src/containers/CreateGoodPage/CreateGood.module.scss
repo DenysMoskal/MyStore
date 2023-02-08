@@ -1,0 +1,88 @@
+.wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow__back {
+  object-fit: cover;
+  width: 35px;
+  height: 35px;
+  left: -10px;
+  bottom: 2px;
+
+  position: absolute;
+}
+
+.form {
+  width: 260px;
+  padding: 20px;
+  border: 3px solid var(--color-brown);
+  margin: auto;
+
+  border-radius: 5px;
+}
+.form__title {
+  color: var(--color-brown);
+  text-align: center;
+  margin: 4px;
+}
+
+.form__name {
+  color: var(--color-dark);
+  font-size: 18px;
+}
+
+.form__input {
+  height: 30px;
+  width: 220px;
+  border: 3px solid var(--color-dark);
+  margin-top: 10px;
+}
+
+.form__error {
+  margin: 0;
+  color: rgb(198, 41, 41);
+  font-size: 14px;
+}
+
+.form__area {
+  height: 90px;
+  width: 220px;
+  border: 3px solid var(--color-dark);
+  margin-top: 10px;
+}
+
+.form__file {
+  display: none;
+}
+
+.form__btn {
+  display: block;
+  border: 3px solid black;
+  margin: auto;
+  width: 220px;
+  height: 36px;
+  margin-top: 10px;
+  background-color: rgb(198, 41, 41);
+  cursor: pointer;
+}
+
+.form__btn:hover {
+  color: aqua;
+}
+
+.form__submit {
+  display: block;
+  margin: auto;
+  font-size: 24px;
+  border: 2px solid var(--color-brown);
+  border-radius: 10%;
+  padding: 20px;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  cursor: pointer;
+}
+
+.form__submit:hover {
+  color: var(--color-brown);
+}

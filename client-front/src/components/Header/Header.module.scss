@@ -19,21 +19,21 @@
     display: block;
     text-decoration: none;
     font-size: 24px;
-    border: 2px solid black;
+    border: 2px solid var(--color-dark);
     list-style: none;
     border-radius: 10%;
     padding: 20px;
-    color: white;
-    background-color: black;
+    color: var(--color-white);
+    background-color: var(--color-dark);
     cursor: pointer;
     margin-right: 60px;
   }
   a:hover {
-    color: aqua;
+    color: var(--color-blue);
   }
 }
 
 .list__container :global(a.active) {
-  border: 2px solid rgb(128, 55, 0);
-  color: rgb(128, 55, 0);
+  border: 2px solid var(--color-brown);
+  color: var(--color-brown);
 }

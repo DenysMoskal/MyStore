@@ -13,7 +13,7 @@
 .item {
   text-decoration: none;
   list-style-type: none;
-  border: 2px solid black;
+  border: 2px solid var(--color-dark);
   border-radius: 5px;
   padding: 10px;
   margin: 20px;
@@ -33,26 +33,27 @@
   &__name {
     margin: 2px;
     text-align: center;
-    color: black;
+    color: var(--color-dark);
     span {
-      color: rgb(141, 5, 5);
+      color: var(--color-brown);
     }
     height: 55px;
   }
   &__price {
     margin: 2px;
     text-align: center;
-    color: black;
+    color: var(--color-dark);
     span {
-      color: rgb(141, 5, 5);
+      color: var(--color-brown);
     }
   }
   &__description {
     margin: 2px;
     text-align: center;
-    color: black;
+    color: var(--color-dark);
     span {
-      color: rgb(141, 5, 5);
+      color: var(--color-brown);
+      word-break: break-all;
     }
   }
 }
@@ -63,6 +64,6 @@
 }
 
 .item::-webkit-scrollbar-thumb {
-  background: rgb(141, 5, 5);
+  background: var(--color-brown);
   border-radius: 5px;
 }
