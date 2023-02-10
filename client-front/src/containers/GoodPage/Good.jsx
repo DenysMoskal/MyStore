@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getGood } from '@store/goods/goodSlice';
+import { setGoodToFavorite } from '@store/favorite/favoriteSlice';
 
 import NotFound from '@components/NotFound';
 

@@ -18,6 +18,9 @@ const Header = () => {
         <li>
           <NavLink to="/create">Create good</NavLink>
         </li>
+        <li>
+          <NavLink to="/basket">Basket</NavLink>
+        </li>
       </ul>
     </div>
   );

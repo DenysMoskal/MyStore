@@ -16,6 +16,7 @@ const Shop = () => {
   const { items, isError, isLoading } = useSelector(
     (state) => state.goods.goods,
   );
+
   const dispatch = useDispatch();
 
   const [text, setText] = React.useState('');

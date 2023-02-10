@@ -16,7 +16,7 @@
   border: 2px solid var(--color-dark);
   border-radius: 5px;
   padding: 10px;
-  margin: 20px;
+  margin: 20px 20px 0 20px;
   height: 460px;
   max-width: 240px;
   overflow-y: scroll;
@@ -66,4 +66,63 @@
 .item::-webkit-scrollbar-thumb {
   background: var(--color-brown);
   border-radius: 5px;
+}
+
+.button__wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 240px;
+  margin: auto;
+  margin-right: 20px;
+}
+
+.add__favorite {
+  text-decoration: none;
+  font-size: 16px;
+  border: 2px solid var(--color-dark);
+  list-style: none;
+  border-radius: 10%;
+  padding: 20px;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  height: 64px;
+
+  span {
+    border: 2px solid var(--color-brown);
+    border-radius: 100px;
+    padding: 2px;
+    background-color: var(--color-brown);
+  }
+}
+
+.add__favorite:hover {
+  color: var(--color-blue);
+}
+
+.minus__favorite {
+  text-decoration: none;
+  font-size: 24px;
+  border: 2px solid var(--color-dark);
+  list-style: none;
+  border-radius: 10%;
+  padding: 20px;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 64px;
+}
+
+.minus__favorite:hover {
+  color: var(--color-brown);
 }
